@@ -1,0 +1,39 @@
+clc;
+clear all;
+close all;
+
+x = input('Enter the first sequence');
+y = input('Enter the second sequence');
+
+yNeg = [];
+
+for i = length(y):-1:1
+  yNeg = [yNeg y(i)];
+end
+
+z = [];
+for i = 1:length(x)
+  temp = yNeg.*x(i);
+  z = [z;temp];
+end
+
+ans = [];
+[r c] = size(z);
+start = 2;
+endIndex = r+c;
+sum = 0;
+while(start <= endIndex)
+  for i = 1:r
+    for j = 1:c
+      if ((i+j)==start)
+        sum = sum + z(i,j);
+      endif
+    endfor
+  endfor
+  ans = [ans sum];
+  sum = 0;
+  start = start + 1;
+end
+
+disp(ans);
+
