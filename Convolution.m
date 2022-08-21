@@ -4,6 +4,7 @@ close all;
 
 x = input('Enter the first sequence');
 h = input('Enter the second sequence');
+#Input Formet: [1 3 7 4 9 5]
 
 z = [];
 for i = 1:length(x)
@@ -30,3 +31,4 @@ ans = [ans sum];
 sum = 0;
 end
 disp(ans);
+stem(ans);

@@ -3,18 +3,17 @@ clear all;
 close all;
 
 x = input('Enter the first sequence');
-y = input('Enter the second sequence');
 #Input Formet: [1 3 7 4 9 5]
 
-yNeg = [];
+xNeg = [];
 
-for i = length(y):-1:1
-  yNeg = [yNeg y(i)];
+for i = length(x):-1:1
+  xNeg = [xNeg x(i)];
 end
 
 z = [];
 for i = 1:length(x)
-  temp = yNeg.*x(i);
+  temp = xNeg.*x(i);
   z = [z;temp];
 end
 
