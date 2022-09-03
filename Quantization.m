@@ -27,24 +27,16 @@ title('Sampled sinusoidal signal');
 xlabel('Time(n)');
 ylabel('Amplitude');
 
-nSamples = length(sampledSignal); #Total number of samples
-quantizedSignal = zeros(1, nSamples); #Making an array of size = nSamples
-bit = 3;
-stepSize = 2*a/(2^bit); #Calculating the step size
-low = -a+stepSize/2;
-high = a-stepSize/2;
-for i = low:stepSize:high
-  for j = 1:nSamples
-    if (((i - stepSize/2)<=sampledSignal(j)) && (sampledSignal(j)<=(i+stepSize/2)))
-      quantizedSignal(j) = i;
-    endif
-  endfor
-endfor
-disp(quantizedSignal);
+#Quantization
+bit = 3; #Number of bits
+qMin = min(sampledSignal);
+qMax = max(sampledSignal);
+step = (qMax - qMin) / (2^bit);
+quantizedSignal = round(sampledSignal/step)*step;
 
 subplot(3, 1, 3);
 plot(ts, quantizedSignal);
-axis([0 t(end) -a-1 a+1]);
+axis([0 ts(end) qMin-1 qMax+1]);
 grid on;
 title('Quantized sinusoidal signal');
 xlabel('Time(n)');
