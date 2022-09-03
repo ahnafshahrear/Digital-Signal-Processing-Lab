@@ -30,5 +30,6 @@ startIndex = startIndex+1;
 ans = [ans sum];
 sum = 0;
 end
+
 disp(ans);
-stem(ans);
+#stem(ans);

@@ -36,9 +36,7 @@ while(start <= endIndex)
 end
 
 disp(ans);
+#x = 1:length(ans);
+#stem(x,ans);
 
-x = 1:length(ans);
-stem(x,ans);
-
-#Input Formet: [1 3 7 4 9 5]
 
