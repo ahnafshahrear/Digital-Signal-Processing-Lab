@@ -20,14 +20,14 @@ end
 n = -10:1:10;
 subplot(3, 3, 2);
 stem(n, unitStep, '.');
-title('Unit sample sequence');
+title('Unit step sequence');
 
 #Ramp sequence
 point = 21;
 rampSequence = zeros(1, point);
 n = -5:1:15;
 for i = 6:point
-  rampSequence(i) = i - 5;
+  rampSequence(i) = i - 6;
 end
 subplot(3, 3, 3);
 stem(n, rampSequence, '.');

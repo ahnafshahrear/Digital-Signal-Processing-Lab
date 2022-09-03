@@ -27,7 +27,7 @@ title('Sampled sinusoidal signal');
 xlabel('Time(n)');
 ylabel('Amplitude');
 
-#Quantization
+%Quantization
 bit = 3; #Number of bits
 qMin = min(sampledSignal);
 qMax = max(sampledSignal);

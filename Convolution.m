@@ -2,9 +2,12 @@ clc;
 clear all;
 close all;
 
-x = input('Enter the first sequence');
-h = input('Enter the second sequence');
-#Input Formet: [1 3 7 4 9 5]
+%x = input('Enter the first sequence');
+%h = input('Enter the second sequence');
+%Input Formet: [1 3 7 4 9 5]
+
+h = [1 2 3 4];
+x = [2 1 2];
 
 z = [];
 for i = 1:length(x)
@@ -31,5 +34,12 @@ ans = [ans sum];
 sum = 0;
 end
 
+z1 = 2;
+z2 = 3;
+index = (z1 + z2 - 1);
+n = -(index - 1):1:length(ans)-index;
 disp(ans);
-#stem(ans);
+disp(n);
+
+disp(ans);
+stem(n, ans);

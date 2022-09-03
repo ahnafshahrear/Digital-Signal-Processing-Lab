@@ -36,3 +36,5 @@ overSampled = a*sin(2*pi*f*ts);
 subplot(2, 2, 4);
 stem(ts, overSampled, '.');
 title('Over sampled sinwave');
+
+
