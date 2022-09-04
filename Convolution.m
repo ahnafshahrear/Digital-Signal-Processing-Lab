@@ -2,9 +2,9 @@ clc;
 clear all;
 close all;
 
-%x = input('Enter the first sequence');
-%h = input('Enter the second sequence');
-%Input Formet: [1 3 7 4 9 5]
+#... x = input('Enter the first sequence');
+#... h = input('Enter the second sequence');
+#... Input Formet: [1 3 7 4 9 5]
 
 h = [1 2 3 4];
 x = [2 1 2];
@@ -16,9 +16,9 @@ for i = 1:length(x)
 end
 
 [r c] = size(z);
-lastIndex = r+c;
 startIndex = 2;
-ans = [];
+lastIndex = r+c;
+ans = []; #... Convolution will be stored here
 sum = 0;
 
 while(startIndex <= lastIndex)
@@ -29,17 +29,15 @@ while(startIndex <= lastIndex)
       endif
     endfor
   endfor
-startIndex = startIndex+1;
-ans = [ans sum];
-sum = 0;
+  startIndex = startIndex+1;
+  ans = [ans sum];
+  sum = 0;
 end
 
-z1 = 2;
-z2 = 3;
-index = (z1 + z2 - 1);
-n = -(index - 1):1:length(ans)-index;
-disp(ans);
-disp(n);
+z1 = 2; #... 0'th index of x
+z2 = 3; #... 0'th index of h
+index = (z1+z2-1); #... 0'th index of convolution
+n = -(index-1):1:length(ans)-index;
 
 disp(ans);
 stem(n, ans);

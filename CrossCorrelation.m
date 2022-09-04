@@ -2,9 +2,9 @@ clc;
 clear all;
 close all;
 
-%x = input('Enter the first sequence');
-%y = input('Enter the second sequence');
-%Input Formet: [1 3 7 4 9 5]
+#... x = input('Enter the first sequence');
+#... y = input('Enter the second sequence');
+#... Input Formet: [1 3 7 4 9 5]
 
 x = [1 3 2 4];
 y = [2 1 2];

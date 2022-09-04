@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-#Sin wave
+%Sinwave
 f = 5;
 a = 12;
 t = 0:0.005:1;

@@ -14,7 +14,7 @@ title('Continuous sinusoidal signal');
 xlabel('Time(s)');
 ylabel('Amplitude');
 
-fs = 80; #Sampling frequency = 8Hz
+fs = 80; #Sampling frequency = 80Hz
 ts = 0:1/fs:1; #Time index
 sampledSignal = a*sin(2*pi*f*ts);
 subplot(3, 1, 2);
@@ -27,11 +27,11 @@ title('Sampled sinusoidal signal');
 xlabel('Time(n)');
 ylabel('Amplitude');
 
-%Quantization
+#Quantization
 bit = 3; #Number of bits
 qMin = min(sampledSignal);
 qMax = max(sampledSignal);
-step = (qMax - qMin) / (2^bit);
+step = (qMax-qMin) / (2^bit);
 quantizedSignal = round(sampledSignal/step)*step;
 
 subplot(3, 1, 3);

@@ -54,7 +54,7 @@ subplot(3, 3, 6);
 stem(n, randomSeq, '.');
 title('Random sequence');
 
-#Sin wave
+#Sinwave
 f = 4;
 a = 7;
 t = 0:0.01:1;
@@ -63,7 +63,7 @@ subplot(3, 3, 7);
 plot(t, sinSeq);
 title('Sin wave');
 
-#Cos wave
+#Coswave
 f = 4;
 a = 7;
 t = 0:0.01:1;
@@ -72,9 +72,9 @@ subplot(3, 3, 8);
 plot(t, cosSeq);
 title('Cos wave');
 
-#Multiple sin wave
+#Complex sinwave
 t = 0:0.005:1;
 complexSeq = 5*sin(2*pi*3*t)+5*sin(2*pi*7*t);
-subplot(3, 3, 9);
+subplot(3,3,9);
 plot(t, complexSeq);
-title('Complex sequence');
+title('Complex sinwave');

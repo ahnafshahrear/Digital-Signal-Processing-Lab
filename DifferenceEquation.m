@@ -6,10 +6,9 @@ n = -3:1:7;
 index = find(n==0);
 x = zeros(1,length(n));
 x(index) = 1;
-%x = rand(1, length(n));
-subplot(2,2,1)
-stem(n,x,'.')
-axis tight
+subplot(2,2,1);
+stem(n,x,'.');
+axis tight;
 
 b = [5 0 -4 1]; %Coeffecients of x
 a = [1 -2]; %Coeffecients of y

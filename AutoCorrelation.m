@@ -3,7 +3,7 @@ clear all;
 close all;
 
 x = input('Enter the first sequence');
-#Input Formet: [1 3 7 4 9 5]
+#... Input Formet: [1 3 7 4 9 5]
 
 xNeg = [];
 
