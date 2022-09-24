@@ -11,7 +11,7 @@ subplot(2, 2, 1);
 plot(t, analogSin);
 title('Continuous sinwave');
 
-#Sampled sin wave with fs = 2*f
+%Sampled sin wave with fs = 2*f
 fs = f*2;
 ts = 0:1/fs:1;
 sampledSin = a*sin(2*pi*f*ts);
@@ -21,7 +21,7 @@ stem(ts, sampledSin, '.');
 hold on;
 title('Sampled sinwave');
 
-#Under sampled sin wave with fs < 2*f
+%Under sampled sin wave with fs < 2*f
 fs = 3;
 ts = 0:1/fs:1;
 underSampled = a*sin(2*pi*f*ts);
@@ -29,7 +29,7 @@ subplot(2, 2, 3);
 stem(ts, underSampled, '.');
 title('Under sampled sinwave');
 
-#Over sampled sin wave with fs > 2*f
+%Over sampled sin wave with fs > 2*f
 fs = f*10;
 ts = 0:1/fs:1;
 overSampled = a*sin(2*pi*f*ts);

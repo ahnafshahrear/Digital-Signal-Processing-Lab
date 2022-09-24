@@ -2,7 +2,7 @@ clc;
 clear all;
 close all;
 
-x = input('Enter the first sequence');
+x = input(©Enter the first sequence©);
 #... Input Formet: [1 3 7 4 9 5]
 
 xNeg = [];
@@ -36,7 +36,7 @@ while(start <= endIndex)
 end
 
 disp(ans);
-#x = 1:length(ans);
-#stem(x,ans);
+x = 1:length(ans);
+stem(x,ans);
 
 

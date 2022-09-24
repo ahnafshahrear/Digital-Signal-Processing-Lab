@@ -34,6 +34,7 @@ subplot(2,2,3)
 stem(n,y1,'.')
 axis tight
 
+#... Normalization
 maxValue = max(y1)
 normalized = y1/maxValue;
 subplot(2,2,4);
