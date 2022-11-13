@@ -1,82 +1,43 @@
-clc; #... Clear cmd
+clc; #... Clear command line
 clear all; #... Clear variables
-close all; #... Cleat figures
+close all; #... Clear figures
 
-#... Examples of different types of sequences
+#... Given a continue signal x=12*sin(2*pi*5*t)
+#... Sample the signal with Nyquist Rate
+#... Sample the signal with over & under sampling
 
-#... Unit smaple sequence
-point = 21;
-unitSample = zeros(1, point);
-unitSample(11) = 1;
-n = -10:1:10;
-subplot(3, 3, 1);
-stem(n, unitSample, '.');
-title('Unit sample sequence');
+#... Given sinewave
+f = 5; #... Frequency = 5 Hz
+a = 12; #... Amplitude = 12
+t = 0:0.005:1 #... Continuous time
+analogSignal = a*sin(2*pi*f*t);
+subplot(2,2,1);
+plot(t, analogSignal);
+title("Analog sinwave");
 
-#... Unit step sequence
-point = 21;
-unitStep = ones(1, point);
-for i = 1:10
-  unitStep(i) = 0;
-end
-n = -10:1:10;
-subplot(3, 3, 2);
-stem(n, unitStep, '.');
-title('Unit step sequence');
+#... Sampling with Nyquist Rate
+#... Nyquist Rate = 2*f
+fs = 2*f; #... Sampling frequency
+n = 0:1/fs:1; #... Sampled time
+sampledSignal = a*sin(2*pi*f*n);
+subplot(2,2,2);
+stem(n, sampledSignal, ".");
+title("Sampled with Nyquist Rate");
 
-#... Ramp sequence
-point = 21;
-rampSequence = zeros(1, point);
-n = -5:1:15;
-for i = 6:point
-  rampSequence(i) = i - 6;
-end
-subplot(3, 3, 3);
-stem(n, rampSequence, '.');
-title('Ramp sequence');
+#... Under Sampling
+#... Sampling frequency under 2*f
+fs = 1.5*f; #... Sampling frequency
+n = 0:1/fs:1; #... Sampled time
+sampledSignal = a*sin(2*pi*f*n);
+subplot(2,2,3);
+stem(n, sampledSignal, ".");
+title("Under samplin");
 
-#... Exponential sequence
-point = 20;
-n = 0:point;
-expoSeq = 1.3.^(n);
-subplot(3, 3, 4);
-stem(n, expoSeq, '.');
-title('Exponential sequence');
-
-expoSeq = 0.7.^(n);
-subplot(3, 3, 5);
-stem(n, expoSeq, '.');
-title('Exponential sequence');
-
-#... Random sequence
-point = 21;
-n = -10:1:10;
-randomSeq = rand(1, point);
-subplot(3, 3, 6);
-stem(n, randomSeq, '.');
-title('Random sequence');
-
-#... Sinwave
-f = 4; #... Frequency
-a = 7; #... Amplitude
-t = 0:0.01:1; #... Time
-sinSeq = a*sin(2*pi*f*t);
-subplot(3, 3, 7);
-plot(t, sinSeq);
-title('Sin wave');
-
-#... Coswave
-f = 4; #... Frequency
-a = 7; #... Amplitude
-t = 0:0.01:1; #... Time
-cosSeq = a*cos(2*pi*f*t);
-subplot(3, 3, 8);
-plot(t, cosSeq);
-title('Cos wave');
-
-#... Complex sinwave
-t = 0:0.005:1;
-complexSeq = 5*sin(2*pi*3*t)+5*sin(2*pi*7*t);
-subplot(3,3,9);
-plot(t, complexSeq);
-title('Complex sinwave');
+#... Over Sampling
+#... Sampling frequency over 2*f
+fs = 7*f; #... Sampling frequency
+n = 0:1/fs:1; #... Sampled time
+sampledSignal = a*sin(2*pi*f*n);
+subplot(2,2,4);
+stem(n, sampledSignal, ".");
+title("Over samplin");
