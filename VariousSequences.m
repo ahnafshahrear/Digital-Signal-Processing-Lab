@@ -57,16 +57,16 @@ stem(n, randomSeq, '.');
 title('Random sequence');
 
 #... Analog sinwave
-f = 4;
-a = 7;
-t = 0:0.01:1; #... Time
+f = 5; #... Frequency(Hz)
+a = 12; #... Amplidude
+t = 0:0.01:1; #... Continuous time
 sinSeq = a*sin(2*pi*f*t);
 subplot(3, 3, 7);
 plot(t, sinSeq);
 title('Sinwave');
 
 #... Digital sinwave
-fs = 32; #... sampling frequency
+fs = 50; #... Sampling frequency
 n = 0:1/fs:1; #... Samples
 sampledSeq = a*sin(2*pi*f*n);
 subplot(3, 3, 8);
@@ -75,6 +75,7 @@ title('Sampled sinwave');
 
 #... Complex sinwave
 t = 0:0.005:1;
+#... Combination of two sinewave
 complexSeq = 5*sin(2*pi*3*t)+5*sin(2*pi*7*t);
 subplot(3,3,9);
 plot(t, complexSeq);
