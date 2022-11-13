@@ -1,8 +1,8 @@
-clc; #... Clear command line
+clc; #... Clear cmd
 clear all; #... Clear variables
-close all; #... Clear figures
+close all; #... Cleat figures
 
-#... Examples of various sequences
+#... Examples of different types of sequences
 
 #... Unit smaple sequence
 point = 21;
@@ -56,22 +56,23 @@ subplot(3, 3, 6);
 stem(n, randomSeq, '.');
 title('Random sequence');
 
-#... Analog sinwave
-f = 4;
-a = 7;
+#... Sinwave
+f = 4; #... Frequency
+a = 7; #... Amplitude
 t = 0:0.01:1; #... Time
 sinSeq = a*sin(2*pi*f*t);
 subplot(3, 3, 7);
 plot(t, sinSeq);
-title('Sinwave');
+title('Sin wave');
 
-#... Digital sinwave
-fs = 32; #... sampling frequency
-n = 0:1/fs:1; #... Samples
-sampledSeq = a*sin(2*pi*f*n);
+#... Coswave
+f = 4; #... Frequency
+a = 7; #... Amplitude
+t = 0:0.01:1; #... Time
+cosSeq = a*cos(2*pi*f*t);
 subplot(3, 3, 8);
-stem(n, sampledSeq, '.');
-title('Sampled sinwave');
+plot(t, cosSeq);
+title('Cos wave');
 
 #... Complex sinwave
 t = 0:0.005:1;
