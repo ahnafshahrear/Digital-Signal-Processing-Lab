@@ -2,8 +2,8 @@ clc; #... Clear command line
 clear all; #... Clear variables
 close all; #... Clear figures
 
-#... x = input(©Enter the values of x©);
-#... h = input(©Enter the values of h©);
+#... x = input("Enter the values of x");
+#... h = input("Enter the values of h");
 #... Input formet = [2 7 3 1 5]
 
 h = [1 2 3 4]; #... Impulse response
