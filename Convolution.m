@@ -16,22 +16,13 @@ for i = 1:length(x)
 endfor
 
 [r c] = size(z); #... Row & column of z
-startSum = 2; #... To determines the terms of first value
-lastSum = r+c; #... To determines last value
-ans = []; #... Convolution result will be stored here
+ans = zeros(1,r+c-1); #... Convolution result will be stored here
 
-while (startSum <= lastSum)
-  sum = 0;
-  for i = 1:r
-    for j = 1:c
-      if ((i+j)==startSum)
-        sum = sum+z(i,j);
-      endif
-    endfor
+for i = 1:r
+  for j = 1:c
+    ans(i+j-1) = ans(i+j-1)+z(i,j);
   endfor
-  startSum = startSum+1; #... For next value
-  ans = [ans sum]; #... Store sum in the back of ans
-end
+endfor
 
 z1 = 2; #... 0©th index of x
 z2 = 3; #... 0©th index of h
