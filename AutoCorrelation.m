@@ -5,7 +5,7 @@ close all; #... Clear figures
 #... x = input('Enter the first sequence');
 #... Input Formet: [1 3 7 4 9 5]
 
-x = [1 3 2 4];
+x = [1 3 5 4];
 xNeg = fliplr(x);
 
 z = [];
@@ -25,6 +25,6 @@ endfor
 
 disp(ans);
 n = -(length(xNeg)-1):length(x)-1;
-stem(n, ans);
+stem(n, ans, ".");
 
 

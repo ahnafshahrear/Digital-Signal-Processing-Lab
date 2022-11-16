@@ -2,7 +2,7 @@ clc; #... Clear command line
 clear all; #... Clear variables
 close all; #... Clear figures
 
-n = 0:1/80:1;
+n = 0:1/80:1; #... Sampling frequency = 80 Hz
 h = 5*sin(2*pi*4*n);
 x = 7*sin(2*pi*3*n);
 

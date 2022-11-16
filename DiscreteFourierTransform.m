@@ -57,7 +57,7 @@ axis tight;
 #... Time shifting property
 m = 2;
 for k = 0:nPoint-1
-  xD(k+1) = xD(k+1)*exp(i*2*pi*k*m/nPoint);
+  xD(k+1) = xD(k+1)*exp(-i*2*pi*k*m/nPoint);
 endfor
 
 for k = 0:nPoint-1
@@ -73,4 +73,3 @@ n = 0:nPoint-1
 subplot(3,2,5);
 stem(n, xInv, ".");
 axis tight;
-

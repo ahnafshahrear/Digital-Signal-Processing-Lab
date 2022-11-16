@@ -25,9 +25,6 @@ axis tight;
 #... Without filter function
 yPrime = zeros(1,length(n));
 for i = 1:length(n)
-  if(n(i)<0)
-    yPrime(i) = 0;
-  endif
   if(n(i)>=0)
     yPrime(i) = 5*yPrime(i-1)+5*x(i)-4*x(i-2)+x(i-3);
     yPrime(i) = abs(yPrime(i)/2);

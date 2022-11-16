@@ -1,6 +1,6 @@
-clc;
-clear all;
-close all;
+clc; #... Clear command line
+clear all; #... Clear variables
+close all; #... Clear figures
 
 #... pkg install -forge signal
 pkg load signal
@@ -28,6 +28,7 @@ nFft = 0:fftPoint-1;
 subplot(4,1,3);
 plot(nFft,freDom);
 axis tight;
+grid on;
 title("Frequency");
 
 #... Filtering

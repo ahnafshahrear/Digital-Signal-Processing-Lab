@@ -28,7 +28,7 @@ xlabel("Time(n)");
 ylabel("Amplitude");
 
 #... Quantization
-bit = 3; #... Number of bitset
+bit = 2; #... Number of bitset
 aMin = min(sampledSignal); #... Minimum amplitude
 aMax = max(sampledSignal); #... Maximum amplitude
 step = (aMax-aMin)/(2^bit); #... Step size

@@ -28,6 +28,6 @@ z1 = 2; #... 0©th index of x
 z2 = 3; #... 0©th index of h
 index = (z1+z2-1); #... 0©th index of ans
 n = -(index-1):length(ans)-index; #... time(n)
-
+ans = conv(x,h);
 disp(ans);
 stem(n, ans, ".");
