@@ -1,15 +1,13 @@
 # Digital Signal Processing Lab 
 ## 3rd Year 1st Semester
 
-## Authors
-
+## Author
 - [@ahnafshahrear](https://github.com/ahnafshahrear)
 
 ## Language
+- Matlab ( Note: This codes are compatible with GNU Octave. To run on Matlab, remove the comments or replace '#' with '%' )
 
-- Octave
-## Appendix
-
+## Index
 1. Various Sequences
 2. Over & Under Sampling
 3. Quantization
