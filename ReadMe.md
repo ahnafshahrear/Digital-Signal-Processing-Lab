@@ -1,11 +1,11 @@
-# Digital Signal Processing Lab 
-## 3rd Year 1st Semester
+# Digital Signal Processing Lab - 3rd Year 1st Semester
 
 ## Author
 - [@ahnafshahrear](https://github.com/ahnafshahrear)
 
 ## Language
-- Matlab ( Note: This codes are compatible with GNU Octave. To run on Matlab, remove the comments or replace '#' with '%' )
+- Matlab <br>
+Note: This codes are compatible with GNU Octave. To run on Matlab, remove the comments or replace '#' with '%'
 
 ## Index
 1. Various Sequences
